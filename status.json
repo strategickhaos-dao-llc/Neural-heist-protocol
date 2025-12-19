@@ -1,0 +1,21 @@
+{
+  "repo": "Strategickhaos-Cognitive-Heist-Protocol",
+  "status": "AWAITING_CONFIRMATION",
+  "next": "ZYBOOKS_QUESTION",
+  "gta_balance": 341920,
+  "questions": 18,
+  "topics": [
+    "cognitive-science",
+    "flamelang",
+    "productivity",
+    "gamification",
+    "adhd-tools",
+    "parallel-processing",
+    "treasury-management",
+    "autonomous-agents",
+    "unity",
+    "neural-evolution"
+  ],
+  "description": "Sovereign cognitive load management system mapping parallel knowledge inputs (academic, economic, simulation) to sustained hyperfocus.",
+  "last_updated": "2025-12-19T01:18:37.230502Z"
+}
