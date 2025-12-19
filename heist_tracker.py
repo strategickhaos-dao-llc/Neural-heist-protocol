@@ -6,7 +6,7 @@ Tracks cognitive load management through gamified metrics
 
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any
 
 
@@ -23,14 +23,14 @@ class HeistTracker:
     def _load_status(self) -> Dict[str, Any]:
         """Load status from JSON file."""
         if os.path.exists(self.status_file):
-            with open(self.status_file, 'r') as f:
+            with open(self.status_file, 'r', encoding='utf-8') as f:
                 return json.load(f)
         return {}
     
     def _save_status(self) -> None:
         """Save status to JSON file."""
-        self.data['last_updated'] = datetime.utcnow().isoformat() + 'Z'
-        with open(self.status_file, 'w') as f:
+        self.data['last_updated'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+        with open(self.status_file, 'w', encoding='utf-8') as f:
             json.dump(self.data, f, indent=2)
     
     def get_status(self) -> Dict[str, Any]:
